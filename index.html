@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portfolio</title>
@@ -15,13 +16,18 @@
         <h1>Student Portfolio</h1>
         <p>Welcome to My Personal Portfolio</p>
 
-        <nav>
-            <a href="#home">Home</a> |
-            <a href="#about">About</a> |
-            <a href="#education">Education</a> |
-            <a href="#skills">Skills</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#achievements">Achievements</a> |
+        
+        <button id="menuButton" type="button">
+            ☰ Menu
+        </button>
+
+        <nav id="navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -202,29 +208,32 @@
             please fill out the form below.
         </p>
 
-        <form action="#" method="post">
-
-            <label for="name">Full Name:</label><br>
+        <form id="contactForm">
+            <label for="name">Full Name:</label>
             <input type="text" id="name"
-            name="name" placeholder="Enter your name"><br><br>
-
-            <label for="email">Email Address:</label><br>
+            name="name" placeholder="Enter your name"
+            required minlength="3">
+            
+            <label for="email">Email Address:</label>
             <input type="email" id="email"
-            name="email" placeholder="Enter your email"><br><br>
-
-            <label for="subject">Subject:</label><br>
+            name="email" placeholder="Enter your email"
+            required>
+            
+            <label for="subject">Subject:</label>
             <input type="text" id="subject"
-            name="subject" placeholder="Enter subject"><br><br>
-
-            <label for="message">Your Message:</label><br>
+            name="subject" placeholder="Enter subject"
+            required>
+            
+            <label for="message">Your Message:</label>
             <textarea id="message" name="message"
-            rows="5" cols="35"
-            placeholder="Write your message"></textarea><br><br>
-
-            <input type="submit" value="Submit">
-
-            <input type="reset" value="Reset">
-
+            rows="5" placeholder="Write your message"
+            required minlength="10"></textarea>
+            
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            
+            <p id="formMessage" aria-live="polite"></p>
+            
         </form>
 
         <h3>Other Contact Information</h3>
